@@ -106,11 +106,11 @@ const tools = computed<ToolCategory[]>(() => [
           </c-button>
         </c-tooltip>
 
-        <c-tooltip :tooltip="$t('home.uiLib')" position="bottom">
+        <!--<c-tooltip :tooltip="$t('home.uiLib')" position="bottom">
           <c-button v-if="config.app.env === 'development'" to="/c-lib" circle variant="text" :aria-label="$t('home.uiLib')">
             <icon-mdi:brush-variant text-20px />
           </c-button>
-        </c-tooltip>
+        </c-tooltip>-->
 
         <command-palette />
 
@@ -123,12 +123,9 @@ const tools = computed<ToolCategory[]>(() => [
         <c-tooltip position="bottom" :tooltip="$t('home.support')">
           <c-button
             round
-            href="https://www.buymeacoffee.com/cthmsst"
-            rel="noopener"
-            target="_blank"
+            to="/about"
             class="support-button"
             :bordered="false"
-            @click="() => tracker.trackEvent({ eventName: 'Support button clicked' })"
           >
             {{ $t('home.buyMeACoffee') }}
             <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />

@@ -18,6 +18,8 @@ const localeOptions = computed(() =>
     value: locale,
   })),
 );
+
+locale.value = "zh";
 </script>
 
 <template>
