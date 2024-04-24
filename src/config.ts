@@ -17,7 +17,7 @@ export const config = figue({
     baseUrl: {
       doc: 'Application base url',
       format: 'string',
-      default: '/',
+      default: '/it-tools',
       env: 'BASE_URL',
     },
     env: {
